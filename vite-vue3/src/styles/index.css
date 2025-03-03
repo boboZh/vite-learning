@@ -1,0 +1,10 @@
+/* vite中已经集成了postcss功能，推荐使用 css variables */
+@import url('@styles/other.css');
+:root {
+  --main-bg-color: red;
+}
+
+.root {
+  @console.warn hello root;
+  color: var(--main-bg-color);
+}

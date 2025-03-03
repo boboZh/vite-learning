@@ -1,0 +1,18 @@
+{
+  "compilerOptions": {
+    "target": "esnext",
+    "module": "esnext", //esmodule vite开发环境模块加载js模块必须使用esmodule加载
+    "moduleResolution": "node", //使用node解析模块
+    "strict": true,
+    "jsx": "preserve", //ts不编译jsx语法，留给项目里vue-jsx插件去编译
+    "sourceMap": true, // 开启浏览器可以直接调试ts代码
+    "resolveJsonModule": true, //是否可以直接import json
+    "esModuleInterop": true, // import react from 'react';不开启就要import * as react from 'react'
+    "lib": ["esnext", "DOM"], //支持的内置module
+    "types": ["vite/client"],
+    "isolatedModules": true
+  },
+
+  "exclude": ["node_modules"],
+  "include": ["src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx", "src/**/*.vue"]
+}
