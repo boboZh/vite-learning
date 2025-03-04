@@ -10,11 +10,11 @@ import Logo from './assets/vue.svg'
 export default defineComponent({
   setup() {
     return () => {
-      return <div>
-
-        <div id='app' class={`root ${classes.moduleClass}`} >hello vite        </div>
-        <img src={Logo} />
-        </div>
+      return <>
+        <div id='app' class={`root ${classes.moduleClass}`} >hello vite</div>
+        <input type="text" placeholder="input here" />
+          <img src={Logo} />
+        </>
     }
   }
 })

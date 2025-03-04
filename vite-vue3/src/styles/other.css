@@ -1,3 +1,4 @@
 div {
   background: #ccc;
+  scroll-behavior: smooth;
 }
