@@ -6,7 +6,7 @@ import B from "./pages/b";
 
 function App() {
   return (
-    <Router>
+    <>
       <nav>
         <ul>
           <li>
@@ -26,7 +26,7 @@ function App() {
         <Route path="/a" element={<A />}></Route>
         <Route path="/b" element={<B />}></Route>
       </Routes>
-    </Router>
+    </>
   );
 }
 
