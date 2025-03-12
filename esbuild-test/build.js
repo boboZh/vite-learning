@@ -2,6 +2,11 @@ let exampleOnLoadPlugin = {
   name: "example",
   setup(build) {
     let fs = require("fs");
+
+    console.log(build.initialOptions);
+    build.initialOptions.outdir = "lib"; //在setup函数最外层更改options，会立即生效
+    build.start();
+    build.end();
     build.onResolve({ filter: /\.txt$/ }, async (args) => ({
       path: args.path,
       namespace: "txt", //用于后面区分文件的加载，确定是否要处理这类型的文件，如果加了namespace， 那么onLoad钩子中{filter: /\.*/, namespace:'txt'},此时filter只作用于namespace下的文件
